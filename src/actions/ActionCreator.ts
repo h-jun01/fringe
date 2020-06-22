@@ -12,7 +12,6 @@ export enum ActionTypes {
 export type UnionedAction =
   | ReturnType<typeof post>
   | ReturnType<typeof clapping>;
-// | ReturnType<typeof pointMove>;
 
 //投稿
 export const post = (

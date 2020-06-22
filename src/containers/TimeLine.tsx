@@ -4,7 +4,7 @@ import { ClappingUserData } from "../Reducers/Reducer";
 import { clapping } from "../actions/ActionCreator";
 import TimeLine from "../components/TimeLine";
 
-interface TimeLineProps {
+type TimeLineProps = {
   currentUserImage: string;
   currentUserName: string;
   introduceUserImage: string;
@@ -13,7 +13,7 @@ interface TimeLineProps {
   date: string;
   currentValue: string;
   index: number;
-}
+};
 
 const ContainerTimeLine: React.FC<TimeLineProps> = ({ ...props }) => {
   //Context

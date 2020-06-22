@@ -97,9 +97,6 @@ const IntroduceUser: React.FC<IntroduceUserProps> = ({ ...props }) => {
           >
             投稿
           </Button>
-          {/* <button disabled={props.disabled} onClick={props.postClick}>
-            投稿
-          </button> */}
         </p>
       </div>
     </section>
