@@ -1,5 +1,4 @@
-// import { ActionTypes } from "./index";
-import { MultipleUserData, InitalState, PostList } from "../Reducers/Reducer";
+import { MultipleUserData, InitalState, PostList } from "../reducers/Reducer";
 import { format } from "date-fns";
 import ja from "date-fns/locale/ja";
 

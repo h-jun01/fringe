@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect, Fragment } from "react";
 import { Context } from "../App";
-import { MultipleUserData } from "../Reducers/Reducer";
+import { MultipleUserData } from "../reducers/Reducer";
 import { post } from "../actions/ActionCreator";
 import IntroduceUser, { IntroduceUserData } from "../components/IntroduceUser";
 

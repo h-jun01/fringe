@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../App";
-import { MultipleUserData } from "../Reducers/Reducer";
+import { MultipleUserData } from "../reducers/Reducer";
 import CurrentUser, { CurrentUserData } from "../components/CurrentUser";
 
 const ContainerCurrentUser: React.FC = () => {

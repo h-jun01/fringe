@@ -1,5 +1,5 @@
 import React from "react";
-import { MultipleUserData } from "../Reducers/Reducer";
+import { MultipleUserData } from "../reducers/Reducer";
 import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";

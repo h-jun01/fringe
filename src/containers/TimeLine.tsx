@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect, Fragment } from "react";
 import { Context } from "../App";
-import { ClappingUserData } from "../Reducers/Reducer";
+import { ClappingUserData } from "../reducers/Reducer";
 import { clapping } from "../actions/ActionCreator";
 import TimeLine from "../components/TimeLine";
 
@@ -38,7 +38,7 @@ const ContainerTimeLine: React.FC<TimeLineProps> = ({ ...props }) => {
   const currentUser: number = state.multipleUserData.findIndex(
     ({ name }) => name === newPostList[props.index].currentUserName
   );
-  //紹介さてたユーザ
+  //紹介されたユーザ
   const introduceUser: number = state.multipleUserData.findIndex(
     ({ name }) => name === newPostList[props.index].introduceUserName
   );
@@ -101,9 +101,9 @@ const ContainerTimeLine: React.FC<TimeLineProps> = ({ ...props }) => {
     } else {
       clappingUserData = {
         ...clappingUserData,
-        clickNum: newPostList[props.index].clappingUserList[
+        clickNum: (newPostList[props.index].clappingUserList[
           check
-        ].clickNum += 1,
+        ].clickNum += 1),
       };
       setUserClickNum(
         newPostList[props.index].clappingUserList[check].clickNum

@@ -1,49 +1,23 @@
-import React, {
-  useReducer,
-  useState,
-  createContext,
-  Reducer,
-  Fragment,
-} from "react";
+import React, { FC, useState, createContext, Fragment } from "react";
 import {
-  initialState,
   MultipleUserData,
   PostList,
+  initialState,
   reducer,
-  InitalState,
-} from "./Reducers/Reducer";
-import { UnionedAction } from "./actions/ActionCreator";
+} from "./reducers/Reducer";
+import { useLocalStorageReducer } from "./hooks/useLocalStorageReducer";
 import CurrentUser from "./containers/CurrentUser";
 import IntroduceUser from "./containers/IntroduceUser";
 import TimeLine from "./containers/TimeLine";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 
-export const Context: any = createContext([]);
-
-//永続化
-const useLocalStorageReducer = (
-  reducer: Reducer<InitalState, UnionedAction>,
-  defaultState: InitalState,
-  storageKey: string
-) => {
-  const persisted: InitalState = JSON.parse(
-    localStorage.getItem(storageKey) as string
-  );
-  defaultState = persisted;
-  const [state, dispatch] = useReducer(reducer, defaultState);
-  localStorage.setItem(storageKey, JSON.stringify(state));
-
-  return [state, dispatch];
-};
-
-const App: React.FC = () => {
+const App: FC = () => {
   //localStorage無ければ作る
   if (localStorage.getItem("initialState") === null) {
     localStorage.setItem("initialState", JSON.stringify(initialState));
   }
 
-  //型がうまくいかない（ ;  ; ）
   const [state, dispatch]: any = useLocalStorageReducer(
     reducer,
     initialState,
@@ -94,4 +68,5 @@ const App: React.FC = () => {
   );
 };
 
+export const Context: any = createContext([]);
 export default App;

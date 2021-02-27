@@ -1,5 +1,5 @@
 import React from "react";
-import { ClappingUserData } from "../Reducers/Reducer";
+import { ClappingUserData } from "../reducers/Reducer";
 import { makeStyles } from "@material-ui/core/styles";
 import Popover from "@material-ui/core/Popover";
 import Typography from "@material-ui/core/Typography";
